@@ -17,6 +17,7 @@ char **spliter (char *line)
   
    tk = strtok(temp, delimiter);
    
+   /* if user entered whitespaces only*/
    if(tk == NULL) 
    {
    free(line);

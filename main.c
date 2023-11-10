@@ -31,6 +31,8 @@ int main(int ac, char **argv)
 			free(command[i]), command[i] = NULL;
 			}
 		free(command), command = NULL;*/
+		
+		stat = _execute(command,argv);
 
 			
 	}
