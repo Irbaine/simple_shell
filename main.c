@@ -3,22 +3,35 @@
 int main(int ac, char **argv)
 {
 	char *line = NULL;
-	int status = 0;
+	char **command = NULL;
+	int stat = 0;
 	(void) ac;
 	(void) argv;
 	
 	
+	
 	while (1)
 	{
-		line = readln();
-		if(line == NULL)
+		line = read_line();
+		if (line == NULL)
 		{
-			if(isatty(STDIN_FILENO))
+			if (isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, "\n", 1);
-			return (status);
+			return (stat);
 		}
 		
-		printf("%s\n", line);
-		free(line);
+		command = spliter(line);
+		if (command == NULL)
+			continue;
+			
+		/* declar int i; */
+		/*for (i =0; command[i]; i++)
+		{
+			printf("%s\n", command[i]);	
+			free(command[i]), command[i] = NULL;
+			}
+		free(command), command = NULL;*/
+
+			
 	}
 }

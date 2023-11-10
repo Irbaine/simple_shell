@@ -3,3 +3,4 @@ checker
 run
 README.md
 .git
+.gitignore

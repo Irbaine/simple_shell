@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
-* main - execve
 *
 * Return : always 0
 */
 
-char *readln(void)
+char *read_line(void)
 {
-	char *buff = NULL;
+	ssize_t number;
 	size_t size = 0;
-	ssize_t x;
+	char *buff = NULL;
 	
-	/* we can use read fucntion instead of getline*/
 	if(isatty(STDIN_FILENO) == 1)
 		write(STDOUT_FILENO, "$ ", 2);
-	x = getline(&buff,&size,stdin);
-	if( x == -1)
+	/* we can use read fucntion instead of getline*/
+	number = getline(&buff, &size, stdin);
+	if( number == -1)
 	{
 	free(buff);
+	buff = NULL;
 	return (NULL);
 	}
 
