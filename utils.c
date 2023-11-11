@@ -26,21 +26,21 @@ char *_strcopy(char *dest, char *source)
 }
 
 
-char *_strconcat(char *dest, const char *source)
+char *_strconcat(char *destination, char *source)
 {
-  char *n = dest;
-  while (*n != '\0')
+  char *n = destination;
+  while (*n)
   {
     n++;
   }
-  while (*source != '\0')
+  while (*source)
   {
     *n = *source;
     n++;
     source++;
   }
   *n = '\0';
-  return dest;
+  return destination;
 }
 
 char *_strdup(const char *string)
@@ -66,14 +66,14 @@ char *_strdup(const char *string)
 	return (ptr);
 }
 
-int strcompar(char *one, char *two)
+int _strcompar(char *one, char *two)
 {
 	int compar;
 	
 	compar = (int)*one - (int)*two;
 	while (*one)
 	{
-		if (*one != *two)
+		if (*two != *one)
 			break;
 		one++;
 		two++;
@@ -95,4 +95,20 @@ void freeaos(char **arr)
 	}
 	free(arr);
 	arr = NULL;
+}
+
+void err(char *cmd, char *shell, int index)
+{
+	char *in;
+	char msg[] = ": not found\n";
+	
+	in = _itoa(index);
+	
+	write(STDERR_FILENO, shell, _strlength(shell));
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, in, _strlength(in));
+	write(STDERR_FILENO, ": ", 2);
+	write(STDERR_FILENO, cmd, _strlength(cmd));
+	write(STDERR_FILENO, msg, _strlength(msg));
+	free(in);
 }

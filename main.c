@@ -4,22 +4,19 @@ int main(int ac, char **argv)
 {
 	char *line = NULL;
 	char **command = NULL;
-	int stat = 0;
+	int stat = 0, index = 0;
 	(void) ac;
-	(void) argv;
-	
-	
 	
 	while (1)
 	{
 		line = read_line();
-		if (line == NULL)
+		if (!line)
 		{
 			if (isatty(STDIN_FILENO))
 				write(STDOUT_FILENO, "\n", 1);
 			return (stat);
 		}
-		
+		index++;
 		command = spliter(line);
 		if (command == NULL)
 			continue;
@@ -32,7 +29,7 @@ int main(int ac, char **argv)
 			}
 		free(command), command = NULL;*/
 		
-		stat = _execute(command,argv);
+		stat = _execute(command,argv, index);
 
 			
 	}

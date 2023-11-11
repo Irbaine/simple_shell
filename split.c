@@ -6,19 +6,13 @@ char **spliter (char *line)
    int n = 0;
    char *temp = NULL;
    char delimiter[]= " \t\n";
-   char *tk = NULL;
-   char **cmd = NULL;
+   char *tk = NULL, **cmd = NULL;
       
    if(line == NULL)
    	return(NULL);
-   	
-   /* get the first token */
-  temp = _strdup(line);
-  
+  temp = _strdup(line); /* get the first token */
    tk = strtok(temp, delimiter);
-   
-   /* if user entered whitespaces only*/
-   if(tk == NULL) 
+   if(tk == NULL) /* if user entered whitespaces only*/
    {
    free(line);
    line = NULL;
@@ -27,16 +21,13 @@ char **spliter (char *line)
    
    return (NULL);
    }
-   
-   /* walk through other tokens */
-   while(tk != NULL)
+   while(tk != NULL) /* walk through other tokens */
    {
 	counter++;
 	tk = strtok(NULL, delimiter);
-   }
-   
+   } 
    free(temp);
-   
+
    cmd = malloc(sizeof(char *) * (counter + 1));
    if(cmd == NULL)
    {
@@ -49,7 +40,7 @@ char **spliter (char *line)
       {
 	cmd[n++] = _strdup(tk);
 	tk = strtok(NULL, delimiter);
-   }
+	}
    free(line);
    cmd[n] = NULL;
 

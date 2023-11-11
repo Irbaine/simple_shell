@@ -14,20 +14,23 @@
 extern char **environ;
 char *read_line(void);
 
-/* strdup duplicates the string and returns a copy*/
-char *_strdup(const char *string);
 /* splits a string based on a custom delimiter*/
 char **spliter (char *line);
 void freeaos(char **arr);
-int _execute(char **cmd, char **argv);
+int _execute(char **cmd, char **argv, int index);
 
-int strcompar(char *one, char *two); /*compar*/
+/* UTILS */
+char *_strdup(const char *string); /* strdup duplicates the string and returns a copy*/
+int _strcompar(char *one, char *two); /*compar*/
 int _strlength(char *n);
 char *_strcopy(char *dest, char *source);
-char *_strconcat(char *dest, const char *source);
+char *_strconcat(char *destination, char *source);
+char *_itoa(int n);
+void reversestr(char *string, int length);
 
 char *_getenviron(char *var);
 char *_getpath(char *cmd);
+void err(char *cmd, char *shell, int index);
 
 
 #endif
