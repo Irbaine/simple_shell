@@ -1,29 +1,18 @@
 #include "main.h"
+
 char *_getpath(char *cmd)
 {
-	char *env_path, *all, *directory;
-	char *val = "PATH", *delim = ":";
-	int n;
-	
+	char *env_path;
+	char *all;
+	char *val = "PATH";
+	char *delim = ":";
+	char *directory;
 	struct stat st;
 	
+	
 	env_path = _getenviron(val);
-	if (env_path == NULL)
-	{
-		return NULL;
-	}	
+	
 	directory = strtok(env_path, delim);
-	
-	for (n =0; cmd[n]; n++)
-	{
-		if (cmd[n] == '/')
-		{
-			if (stat(cmd, &st) == 0)
-				return (_strdup(cmd));
-			return NULL;
-		}
-	}
-	
 	
 	while (directory)
 	{
@@ -43,12 +32,10 @@ char *_getpath(char *cmd)
 			
 			directory = strtok(NULL, delim);
 		}
-		}
 		free(env_path);
-		return (NULL);
+		return NULL;
 }
 
-/*
 int main(int ac, char **av)
 {
 	char *all;
@@ -58,6 +45,5 @@ int main(int ac, char **av)
 		printf("%s\n", all);
 		else
 			printf("not exist");
-}
-*/
-
+	}
+	}

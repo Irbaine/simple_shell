@@ -13,7 +13,7 @@ char *_getenviron(char *var)
 	{
 		temp = _strdup(environ[n]);
 		key = strtok(temp, delim);
-		if (_strcompar(key, var) == 0)
+		if (strcompar(key, var) == 0)
 		{
 			val = strtok(NULL, "\n");
 			env = _strdup(val);
@@ -26,11 +26,10 @@ char *_getenviron(char *var)
 	return (NULL);
 }
 
-/*
 int main()
 {
 	char *env = _getenviron("PWD");
-	printf("%s\n", env);
+	/*printf("%s\n", env);*/
 	free(env);
 	return (0);
-} */
+}
