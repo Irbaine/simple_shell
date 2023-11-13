@@ -30,4 +30,8 @@ char *_getenviron(char *var);
 char *_getpath(char *cmd);
 
 
+void handle_cmd(int *stat, char **cmd, int index, char **argv);
+void exit_sh(char **cmd, int *stat);
+void show_env(int *stat, char **cmd);
+
 #endif

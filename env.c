@@ -26,10 +26,11 @@ char *_getenviron(char *var)
 	return (NULL);
 }
 
+/*
 int main()
 {
 	char *env = _getenviron("PWD");
-	/*printf("%s\n", env);*/
+
 	free(env);
 	return (0);
-}
+} */
