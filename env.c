@@ -7,8 +7,8 @@ char *_getenviron(char *var)
 	char *env;
 	char *val;
 	char *delim = "=";
+
 	int n;
-	
 	for (n = 0; environ[n]; n++)
 	{
 		temp = _strdup(environ[n]);

@@ -6,9 +6,6 @@ int main(int ac, char **argv)
 	char **cmd = NULL;
 	int stat = 0, index = 0;
 	(void) ac;
-	
-	
-	
 	while (1)
 	{
 		line = read_line();
@@ -22,14 +19,11 @@ int main(int ac, char **argv)
 		cmd = spliter(line);
 		if (cmd == NULL)
 			continue;
-			
 		if (strcompar(cmd[0], "env") == 0 || strcompar(cmd[0], "cd") == 0 || strcompar(cmd[0], "setenv") == 0 ||
 		strcompar(cmd[0], "exit") == 0) {
 		handle_cmd(&stat, cmd, index, argv);
-		} else	
+		}
+	else
 
-		stat = _execute(cmd,argv); /*add an index*/
-
-			
+		stat = _execute(cmd, argv); /*add an index*/}
 	}
-}
