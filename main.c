@@ -19,7 +19,8 @@ int main(int ac, char **argv)
 		cmd = spliter(line);
 		if (cmd == NULL)
 			continue;
-		if (strcompar(cmd[0], "env") == 0 || strcompar(cmd[0], "cd") == 0 || strcompar(cmd[0], "setenv") == 0 ||
+		if (strcompar(cmd[0], "env") == 0 ||
+		strcompar(cmd[0], "cd") == 0 || strcompar(cmd[0], "setenv") == 0 ||
 		strcompar(cmd[0], "exit") == 0) {
 		handle_cmd(&stat, cmd, index, argv);
 		}

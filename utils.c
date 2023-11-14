@@ -1,14 +1,11 @@
 #include "main.h"
-
 int _strlength(char *n)
 {
   int length = 0;
-
   while (n[length])
   {
     length++;
   }
-
   return (length);
 }
 
@@ -23,44 +20,6 @@ char *_strcopy(char *dest, char *source)
   }
   *n = '\0';
   return (dest);
-}
-
-
-char *_strconcat(char *dest, const char *source)
-{
-  char *n = dest;
-  while (*n != '\0')
-  {
-    n++;
-  }
-  while (*source != '\0')
-  {
-    *n = *source;
-    n++;
-    source++;
-  }
-  *n = '\0';
-  return (dest);
-}
-char *_strdup(const char *string)
-{
-	int n;
-	int length = 0;
-	char *ptr;
-	if (string == NULL)
-		return (NULL);
-	while (*string != '\0')
-	{
-		length++;
-		string++;
-	}
-	string = string - length;
-	ptr = malloc(sizeof(char) * (length + 1));
-	if (ptr == NULL)
-		return (NULL);
-	for (n = 0; n < = length; n++)
-		ptr[n] = string[n];
-	return (ptr);
 }
 
 int strcompar(char *one, char *two)
@@ -88,6 +47,5 @@ void freeaos (char **arr)
 		free(arr[n]);
 		arr[n] = NULL;
 	}
-	free(arr);
-	arr = NULL;
+	free(arr), arr = NULL;
 }
