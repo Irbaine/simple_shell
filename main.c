@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * main - Entry point
+ * @ac: The number of commands arguments
+ * @argv: An array of strings containing the commands
+ *
+ * Return: Returns the exit status of the program.
+ */
+
 int main(int ac, char **argv)
 {
 	char *line = NULL;

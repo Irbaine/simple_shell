@@ -5,6 +5,7 @@ char *_getpath(char *cmd)
 	char *val = "PATH", *delim = ":";
 	int n;
 	struct stat st;
+
 	env_path = _getenviron(val);
 	if (env_path == NULL)
 	{
@@ -42,14 +43,14 @@ char *_getpath(char *cmd)
 		return (NULL);
 }
 
-/*
-int main(int ac, char **av)
-{
-	char *all;
-	all = _getpath(av[1]);
-	if (all)
-		printf("%s\n", all);
-		else
-			printf("not exist");
-}
+/**
+*int main(int ac, char **av)
+*{
+*	char *all;
+*	all = _getpath(av[1]);
+*	if (all)
+*		printf("%s\n", all);
+*		else
+*			printf("not exist");
+*}
 */
