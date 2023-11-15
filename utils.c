@@ -24,6 +24,7 @@ return (dest);
 
 int strcompar(char *one, char *two)
 {
+<<<<<<< HEAD
 	int compar;
 
 	compar = (int)*one - (int)*two;
@@ -50,4 +51,17 @@ void freeaos(char **arr)
 		arr[n] = NULL;
 	}
 	free(arr), arr = NULL;
+=======
+int compar;
+compar = (int)*one - (int)*two;
+while (*one)
+{
+if (*one != *two)
+break;
+one++;
+two++;
+compar = (int)*one - (int)*two;
+}
+return (compar);
+>>>>>>> 895d9dc485757c90d509207f2e7e3a1584bce11c
 }

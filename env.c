@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+* _getenviron - the env builtin
+* @var: the name of the env var to get
+*
+* Return: the value of the env
+*/
+
 char *_getenviron(char *var)
 {
 	char *key;

@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+* _strconcat - concatinate the string
+* @dest: destination
+* @source: the original string
+*
+* Return: a concatinated string
+*/
+
 char *_strconcat(char *dest, const char *source)
 {
 char *n = dest;
@@ -15,6 +23,13 @@ source++;
 *n = '\0';
 return (dest);
 }
+
+/**
+* _strdup - duplicates the string
+* @string: the original string
+*
+* Return: a concatinated string
+*/
 char *_strdup(const char *string)
 {
 	int n;

@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+* _execute - takes the commands and excute them
+* @cmd: commands to excute
+* @argv: arguments array
+*
+* Return: wexitstatus with status
+*/
+
 int _execute(char **cmd, char **argv)
 {
 	int status;

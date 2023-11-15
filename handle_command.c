@@ -1,8 +1,10 @@
 #include "main.h"
+
 void handle_cmd(int *stat, char **cmd, int index, char **argv)
 {
 	(void) argv;
 	(void) index;
+
 	if (strcompar(cmd[0], "env") == 0)
 		show_env(stat, cmd);
 
