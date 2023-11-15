@@ -9,6 +9,7 @@ char *_getenviron(char *var)
 	char *delim = "=";
 
 	int n;
+
 	for (n = 0; environ[n]; n++)
 	{
 		temp = _strdup(environ[n]);
@@ -27,10 +28,10 @@ char *_getenviron(char *var)
 }
 
 /*
-int main()
-{
-	char *env = _getenviron("PWD");
-
-	free(env);
-	return (0);
-} */
+* int main()
+* {
+*	char *env = _getenviron("PWD");
+*	free(env);
+*	return (0);
+*}
+*/

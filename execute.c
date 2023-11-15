@@ -11,7 +11,7 @@ int _execute(char **cmd, char **argv)
 		{
 			perror(argv[0]);
 			freeaos(cmd);
-			exit(127)
+			exit(127);
 		}
 	}
 	else
