@@ -5,6 +5,7 @@ char *_getpath(char *cmd)
 	char *val = "PATH", *delim = ":";
 	int n;
 	struct stat st;
+
 	env_path = _getenviron(val);
 	if (env_path == NULL)
 	{
