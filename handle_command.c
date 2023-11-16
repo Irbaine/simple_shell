@@ -7,7 +7,6 @@
  * @index: Index value (not currently used in this implementation).
  * @argv: Array of strings representing command-line arguments.
  */
- 
 void handle_cmd(int *stat, char **cmd, int index, char **argv)
 {
 	(void) argv; /* Function body remains unchanged */

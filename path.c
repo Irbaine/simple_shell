@@ -54,8 +54,17 @@ char *_getpath(char *cmd)
 }
 
 /**
+* main - Entry point of the program.
+* @ac: Number of arguments passed to the program.
+* @av: Array of arguments passed to the program.
+*
+* This function serves as the entry point for the program. It retrieves
+* the full path of a command and prints it if found; otherwise, it prints
+* 'not exist'.
+*
+* Return: Always returns 0 to indicate successful execution.
 *int main(int ac, char **av)
-*{
+* {
 *
 *	char *all;
 *	all = _getpath(av[1]);

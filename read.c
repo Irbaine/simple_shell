@@ -1,7 +1,14 @@
 #include "main.h"
 
 /**
-* Return : always 0
+* read_line - Reads a line from standard input.
+*
+* This function reads a line from standard input using getline.
+* If successful, it returns a pointer to the string read from input.
+* On failure or end of input, it returns NULL.
+*
+* Return: On success, returns a pointer to the string read from input.
+* On failure or end of input, returns NULL.
 */
 
 char *read_line(void)
