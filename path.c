@@ -1,5 +1,18 @@
 #include "main.h"
+/**
+ *_getpath - Finds the full path of a command in the PATH environment variable.
+ *@cmd: The command to find in the PATH.
+ *
+ *Searches for @cmd in the PATH environment variable directories. Returns
+ *The full path of the command if found; otherwise, returns NULL.
+ *
+ *Return: On success, returns a string with the full path of the command.
+ *On failure or if the command is not found, returns NULL.
+ */
 char *_getpath(char *cmd)
+{
+	/* Function body remains unchanged */
+}
 {
 	char *env_path, *all, *directory;
 	char *val = "PATH", *delim = ":";
@@ -46,6 +59,7 @@ char *_getpath(char *cmd)
 /**
 *int main(int ac, char **av)
 *{
+*
 *	char *all;
 *	all = _getpath(av[1]);
 *	if (all)
