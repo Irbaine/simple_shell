@@ -10,10 +10,7 @@
  *On failure or if the command is not found, returns NULL.
  */
 char *_getpath(char *cmd)
-{
-	/* Function body remains unchanged */
-}
-{
+{/* Function body remains unchanged */
 	char *env_path, *all, *directory;
 	char *val = "PATH", *delim = ":";
 	int n;

@@ -8,10 +8,7 @@
  * and sets the array elements to NULL, then frees the array itself.
  */
 void freeaos(char **arr)
-{
-    /* Function body remains unchanged */
-}
-{
+{/* Function body remains unchanged */
 int n;
 if (!arr)
 return;
