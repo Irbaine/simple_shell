@@ -51,3 +51,4 @@ void exit_sh(char **cmd, int *stat)
 	freeaos(cmd);
 	exit(*stat);
 }
+

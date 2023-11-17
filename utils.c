@@ -67,3 +67,4 @@ compar = (int)*one - (int)*two;
 }
 return (compar);
 }
+

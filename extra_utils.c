@@ -51,3 +51,4 @@ char *_strdup(const char *string)
 		ptr[n] = string[n];
 	return (ptr);
 }
+
