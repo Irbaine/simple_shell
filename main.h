@@ -47,4 +47,3 @@ void exit_sh(char **cmd, int *stat);
 void show_env(int *stat, char **cmd);
 
 #endif
-
