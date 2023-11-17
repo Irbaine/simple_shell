@@ -17,10 +17,21 @@ char *read_line(void);
 /* strdup duplicates the string and returns a copy*/
 char *_strdup(const char *string);
 /* splits a string based on a custom delimiter*/
-char **spliter (char *line);
+char **spliter(char *line);
 void freeaos(char **arr);
 int _execute(char **cmd, char **argv);
 
+/**
+* strcompar - Compare two strings
+* @one: First string to compare
+* @two: Second string to compare
+*
+* Description: This function compares two strings and returns an integer value
+*              indicating their comparison result.
+*
+* Return: 0 if the strings are equal, a negative value if one is less than two,
+*         or a positive value if one is greater than two.
+*/
 int strcompar(char *one, char *two); /*compar*/
 int _strlength(char *n);
 char *_strcopy(char *dest, char *source);
