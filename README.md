@@ -1,3 +1,8 @@
+# Solution for - Simple Shell Team Project
+
+This group project was done by 
+ [Redouane Hamdoune](https://github.com/username) & [Mohamed Amine Irbaine](https://github.com/Irbaine) 
+
 ## List of allowed functions and system calls
 
     access (man 2 access)
