@@ -28,7 +28,7 @@ int _execute(char **cmd, char **argv);
 * @two: Second string to compare
 *
 * Description: This function compares two strings and returns an integer value
-*              indicating their comparison result.
+*              Indicating their comparison result.
 *
 * Return: 0 if the strings are equal, a negative value if one is less than two,
 *         or a positive value if one is greater than two.
